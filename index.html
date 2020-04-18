@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<title>Upload Image Ajax</title>
+</head>
+<body>
+	<div class="container">
+		<h3 class="text-center mt-4">Upload image ajax </h3>
+		<div class="row justify-content-center">
+			<div class="col-5">
+				<form method="post" class="form-upload" action="upload.php" enctype="multipart/form-data">
+					<div class="form-group">
+						<label>Tilte image</label>
+						<input type="text" name="titleImg" id="titleImg" required  maxlength="20"  minlength="4" class="form-control">
+					</div>
+					<div class="form-group">
+						<input id="file" type="file" name="pic" class="d-none">
+					</div>
+					<div>
+						<label for="file" class="btn btn-success">Choose Image</label>
+					</div>
+					<button id="uploadBtn" class="btn btn-primary btn-block btn-upload">Upload Image</button>
+				</form>
+				<div class="progress mt-5" id="progress">
+				  <div class="progress-bar" id ="progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+				  	<div class="status-upload" id="textstatus"></div>
+				  </div>
+				</div>
+				<div id="response"></div>
+			</div>
+			
+				
+			
+			<div class="col-3">
+				<img id="img"  class="img-fluid">
+			</div>
+		</div>
+
+    <hr>
+	</div>
+
+  <div class="container" id="allImg"></div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
