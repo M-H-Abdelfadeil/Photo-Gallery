@@ -1,6 +1,7 @@
 <?php
-include 'connDB.php';
+
 if (isset($_POST['id'])) {
+	include 'connDB.php';
 	$id = $_POST['id'];
 	$qfetch=$conn->prepare("SELECT * FROM img WHERE id = '$id'");
 	$qfetch->execute();
@@ -17,4 +18,6 @@ if (isset($_POST['id'])) {
 		</div>
     	 ';
 
+}else{
+	header('location:index.html');
 }
