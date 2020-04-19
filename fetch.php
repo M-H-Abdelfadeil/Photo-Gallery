@@ -1,6 +1,5 @@
-<?php
-
-include 'connDB.php';
+if (isset($_POST['fetch'])) {
+	include 'connDB.php';
 
 $qfetch=$conn->prepare("SELECT * FROM img");
 $qfetch->execute();
@@ -27,7 +26,7 @@ $rows = $qfetch->fetchAll(PDO::FETCH_ASSOC);
 		';
 	}
 	echo '</div>';
-?>
-
-
-
+	
+}else{
+	header('location:index.html');
+}
