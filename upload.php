@@ -63,5 +63,5 @@ if (isset($_FILES['pic'])) {
    
 	*/
 }else{
-    echo "Error";
+   header('location:index.html');
 }
