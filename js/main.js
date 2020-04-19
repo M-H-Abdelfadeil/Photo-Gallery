@@ -48,7 +48,7 @@ $(document).ready(function(){
     $(document).on('click','#deleteBtn',function(){
     	var id = $(this).attr('getId');
     	
-    	if (confirm("Press a button!")) {
+    	if (confirm("Are you sure you want to delete it?")) {
     		$.ajax({
 	    		url:'delete.php',
 	              type:'post',
